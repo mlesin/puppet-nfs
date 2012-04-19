@@ -41,7 +41,7 @@ define nfs::mount($ensure=present,
         require => Mount["shared $share by $server"],
       }
       Mount["shared $share by $server"] {
-        ensure => unmounted,
+        ensure => absent,
       }
     }
   }
